@@ -1,0 +1,466 @@
+/* AT-200 Digital Inclinometer System - User Manual Styles */
+/* 인쇄 및 PDF 변환 최적화 버전 */
+
+/* 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* 컨테이너 */
+.manual-container {
+    max-width: 210mm; /* A4 width */
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* 헤더 */
+.manual-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    page-break-after: always;
+}
+
+.manual-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.header-subtitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.header-info {
+    margin-top: 30px;
+    font-size: 1.1em;
+}
+
+.header-info span {
+    display: inline-block;
+    margin: 0 15px;
+    padding: 5px 15px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 3px;
+}
+
+/* 네비게이션 (목차) */
+.manual-nav {
+    padding: 40px;
+    background-color: #f8f9fa;
+    page-break-after: always;
+}
+
+.manual-nav h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+.manual-nav ol {
+    list-style: none;
+    counter-reset: section;
+}
+
+.manual-nav li {
+    counter-increment: section;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.manual-nav li:before {
+    content: counter(section) ". ";
+    font-weight: bold;
+    color: #3498db;
+}
+
+.manual-nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.manual-nav a:hover {
+    color: #3498db;
+}
+
+/* 메인 콘텐츠 */
+.manual-content {
+    padding: 40px;
+}
+
+/* 섹션 스타일 */
+.manual-section {
+    margin-bottom: 60px;
+    page-break-inside: avoid;
+}
+
+.manual-section h2 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #3498db;
+    page-break-after: avoid;
+}
+
+.manual-section h3 {
+    font-size: 1.5em;
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    page-break-after: avoid;
+}
+
+.manual-section h4 {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    page-break-after: avoid;
+}
+
+.manual-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.manual-section ul, .manual-section ol {
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+.manual-section li {
+    margin-bottom: 8px;
+}
+
+/* 테이블 스타일 */
+.manual-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    page-break-inside: avoid;
+}
+
+.manual-table th {
+    background-color: #34495e;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.manual-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.manual-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.manual-table tr:hover {
+    background-color: #e8f4fd;
+}
+
+/* 경고 및 주의사항 박스 */
+.manual-warning {
+    background-color: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    page-break-inside: avoid;
+}
+
+.manual-warning h3, .manual-warning h4 {
+    color: #856404;
+    margin-bottom: 10px;
+}
+
+.manual-note {
+    background-color: #d1ecf1;
+    border: 2px solid #17a2b8;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    page-break-inside: avoid;
+}
+
+.manual-note h4 {
+    color: #0c5460;
+    margin-bottom: 10px;
+}
+
+/* 이미지 스타일 */
+.manual-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.image-caption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+/* 와이어 색상 표시 */
+.wire-red { color: #dc3545; font-weight: bold; }
+.wire-black { color: #000; font-weight: bold; }
+.wire-green { color: #28a745; font-weight: bold; }
+.wire-white { color: #6c757d; font-weight: bold; background-color: #f8f9fa; padding: 2px 4px; }
+
+/* 용어 설명 (dl) 스타일 */
+.glossary dt {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.glossary dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* FAQ 섹션 */
+.faq-section h4 {
+    color: #3498db;
+    margin-top: 20px;
+}
+
+.faq-section p {
+    margin-left: 20px;
+    color: #555;
+}
+
+/* 원형 번호 스타일 */
+.button-number {
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+/* 구성 요소 번호 스타일 (파란 원 안의 흰 번호) */
+.component-number {
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+/* 테이블 컬럼 너비 조정 */
+.display-components-table th:first-child,
+.display-components-table td:first-child {
+    text-align: center;
+}
+
+.keypad-table td:first-child {
+    white-space: nowrap;
+}
+
+/* 푸터 */
+.manual-footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+.manual-footer p {
+    margin-bottom: 5px;
+}
+
+/* 인쇄 스타일 */
+@media print {
+    body {
+        background-color: white;
+    }
+    
+    .manual-container {
+        box-shadow: none;
+        max-width: 100%;
+    }
+    
+    .manual-header {
+        background-color: white;
+        color: black;
+        border: 2px solid #333;
+    }
+    
+    .manual-nav {
+        background-color: white;
+    }
+    
+    .manual-nav a {
+        color: black;
+    }
+    
+    .manual-section {
+        page-break-inside: auto;
+    }
+    
+    .manual-section h2 {
+        page-break-after: avoid;
+        color: black;
+        border-bottom-color: black;
+    }
+    
+    .manual-section h3, .manual-section h4 {
+        page-break-after: avoid;
+        color: black;
+    }
+    
+    .manual-table {
+        page-break-inside: auto;
+    }
+    
+    .manual-table th {
+        background-color: #ddd !important;
+        color: black !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .manual-table tr:nth-child(even) {
+        background-color: #f5f5f5 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .manual-warning {
+        background-color: #fff3cd !important;
+        border-color: #333 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .manual-note {
+        background-color: #d1ecf1 !important;
+        border-color: #333 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .manual-footer {
+        background-color: white;
+        color: black;
+        border-top: 2px solid #333;
+        page-break-before: always;
+    }
+    
+    /* 페이지 번호 */
+    .page-number {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 12px;
+    }
+    
+    .page-number:after {
+        content: counter(page);
+    }
+    
+    /* A4 페이지 설정 */
+    @page {
+        size: A4;
+        margin: 20mm;
+        counter-increment: page;
+    }
+    
+    /* 첫 페이지 여백 조정 */
+    @page:first {
+        margin-top: 10mm;
+    }
+}
+
+/* 반응형 디자인 (화면용) */
+@media screen and (max-width: 768px) {
+    .manual-header h1 {
+        font-size: 2em;
+    }
+    
+    .manual-content {
+        padding: 20px;
+    }
+    
+    .manual-table {
+        font-size: 0.9em;
+    }
+    
+    .manual-table th, .manual-table td {
+        padding: 8px;
+    }
+}
+
+/* 인쇄 미리보기 모드 */
+@media screen and (min-width: 1200px) {
+    .manual-container {
+        margin: 20px auto;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+}
+
+/* 부드러운 스크롤 */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 링크 포커스 스타일 (접근성) */
+a:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* 스킵 네비게이션 (접근성) */
+.skip-nav {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #2c3e50;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.skip-nav:focus {
+    top: 0;
+}
